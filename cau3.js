@@ -1,11 +1,12 @@
-let input = prompt("Nhap them phan tu vao mang (cach nhau boi dau phay): ");
-let array = input.split(",");
-for (let i = 0; i < array.length; i++) {
-    array[i] = parseFloat(array[i]);
-}
-for(let i = 0; i < array.length; i++){
-    if(array[i] % 2 === 1){
-        array.splice(i, 1);
+function countCharacter(string){
+    let count = 0;
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] !== ' ') {
+            count++;
+        }
     }
+    return count;
 }
-console.log(array);
+let input = prompt("Nhap vao 1 chuoi :");
+let count = countCharacter(input);
+console.log(count);

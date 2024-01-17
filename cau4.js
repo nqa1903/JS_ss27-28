@@ -1,16 +1,13 @@
-let input = prompt("Nhap them phan tu vao mang (cach nhau boi dau phay): ");
-let array = input.split(",");
-for (let i = 0; i < array.length; i++) {
-    array[i] = parseFloat(array[i]);
-}
-let evenArray = [];
-let oddArray = [];
-for(let i = 0; i < array.length; i++){
-    if(array[i] % 2 === 0){
-        evenArray.push(array[i]);
-    }else{
-        oddArray.push(array[i]);
+function countCharacter(string, char) {
+    let count = 0;
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === char) {
+            count++;
+        }
     }
+    return count;
 }
-console.log(evenArray);
-console.log(oddArray);
+let stringInput = prompt("Nhap vao chuoi ");
+let charInput = prompt("Nhap vao ky tu: ");
+let count = countCharacter(stringInput,charInput);
+console.log(count);

@@ -1,12 +1,13 @@
-let a = prompt("Nhap vao a :");
-let b = prompt("Nhap vao b :");
-var array = [];
-if (a > b) {
-    var temp = a;
-    a = b;
-    b = temp;
+function arrayMax(arr) {
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i].length > max.length) {
+            max = arr[i];
+        }
+    }
+    return max;
 }
-for(let i = a ; i <= b ; i++){
-    array.push(i);
-} 
-console.log(array);
+let input = prompt("Nhap them phan tu vao mang (cach nhau boi dau phay): ");
+let array = input.split(",");
+let max = arrayMax(array);
+console.log(max);
